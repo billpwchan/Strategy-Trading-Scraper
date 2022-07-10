@@ -11,6 +11,7 @@ const fs = require('fs')
 
 const csv = require('fast-csv');
 const path = require('path');
+const os = require("os");
 
 
 /**
@@ -31,7 +32,7 @@ async function scrapeAll(page) {
                 resolve(
                     mainStats.map(element => {
                         return element.innerHTML.replace(/[^\d.]/g, '');
-                    }).concat([refreshTime + '\n']));
+                    }).concat([refreshTime]));
             })
         })
     }
@@ -60,6 +61,7 @@ async function scrapeAll(page) {
     readStream().then((duplicate_record) => {
         if (!duplicate_record) {
             let ws = fs.createWriteStream(path.resolve('./', 'documents', 'binance_stats.csv'), {flags: 'a'});
+            ws.write(os.EOL);
             const csvStream = csv.format({headers: false, quote: false});
             csvStream.pipe(ws).on('end', () => process.exit());
 
@@ -68,4 +70,5 @@ async function scrapeAll(page) {
         }
     });
 }
+
 module.exports = scrapeAll;
