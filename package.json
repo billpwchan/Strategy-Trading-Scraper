@@ -1,0 +1,32 @@
+{
+  "name": "hk-graduate-jobfinder",
+  "version": "0.0.1",
+  "description": "Hong Kong Graduate Job Finder (Web Scraping)",
+  "main": "index.js",
+  "dependencies": {
+    "exceljs": "^4.2.1",
+    "fast-csv": "^4.3.6",
+    "node-html-parser": "^3.3.0",
+    "puppeteer": "^9.1.1",
+    "puppeteer-cluster": "^0.22.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-adblocker": "^2.11.11",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.2.17",
+    "puppeteer-extra-plugin-recaptcha": "^3.4.0",
+    "puppeteer-extra-plugin-stealth": "^2.7.8",
+    "table": "^6.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billpwchan/HK-Graduate-JobFinder.git"
+  },
+  "author": "Bill Chan <billpwchan@hotmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/billpwchan/HK-Graduate-JobFinder/issues"
+  },
+  "homepage": "https://github.com/billpwchan/HK-Graduate-JobFinder#readme"
+}
