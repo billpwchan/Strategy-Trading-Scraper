@@ -11,6 +11,10 @@ config.companies.binance_spot_grid = {
     entryURL: 'https://www.binance.com/en/strategy/strategyPool?mode=pagination&strategyType=1',
     pageScraper: require('./controllers/binance_spot_grid')
 }
+config.companies.binance_futures_grid = {
+    entryURL: 'https://www.binance.com/en/strategy/strategyPool?mode=pagination&strategyType=2',
+    pageScraper: require('./controllers/binance_futures_grid')
+}
 
 Object.seal(config);
 
