@@ -6,7 +6,10 @@ config.companies = {}
 config.companies.binance_trading_bot = {
     entryURL: 'https://www.binance.com/en/strategy/strategyPool?mode=default&strategyType=1',
     pageScraper: require('./controllers/binance_trading_bot')
-
+}
+config.companies.binance_spot_grid = {
+    entryURL: 'https://www.binance.com/en/strategy/strategyPool?mode=pagination&strategyType=1',
+    pageScraper: require('./controllers/binance_spot_grid')
 }
 
 Object.seal(config);
