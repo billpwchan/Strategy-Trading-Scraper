@@ -66,7 +66,7 @@ async function scrapeAll(page) {
             let botContent = {}
             const root = parse(botCard)
             botContent.cryptoPair = root.querySelector('div.css-1ld3mhe').childNodes[0].rawText
-            botContent.copyPopularity = root.querySelector('div.css-1f9551p').innerText.match(/\d/)[0];
+            botContent.copyPopularity = root.querySelector('div.css-1f9551p').innerText.match(/\d+/)[0];
             botContent.roi = root.querySelector('div.css-oogh8b').innerText
             botContent.pnl = root.querySelector('div.css-1dqzox3').innerText
             botContent.runningTime = root.querySelector('div.css-15u79n8').innerText
