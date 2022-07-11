@@ -4,5 +4,5 @@ do{
     git add .
     git commit -m "Update Files"
     git push
-    start-sleep -Seconds 900
+    start-sleep -Seconds 120
 }until($infinity)
