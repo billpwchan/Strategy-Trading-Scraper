@@ -89,7 +89,7 @@ async function scrapeAll(page) {
         await page.waitForTimeout(1000);
     }
 
-    let writeStream = fs.createWriteStream(path.join('./', 'documents', `binance_spot_grid_${refreshTime.replaceAll(':', '-')}.csv`));
+    let writeStream = fs.createWriteStream(path.join('./', 'documents', 'Spot Grid', `binance_spot_grid_${refreshTime.replaceAll(':', '-')}.csv`));
     writeStream.write('cryptoPair,copyPopularity,roi,pnl,runningTime' + os.EOL);
 
     const csvStream = csv.format({headers: false, quote: false});
