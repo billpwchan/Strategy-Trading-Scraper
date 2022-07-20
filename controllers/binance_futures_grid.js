@@ -20,8 +20,8 @@ async function scrapeAll(page) {
 
     var bots = []
 
-    await page.waitForSelector('#onetrust-accept-btn-handler');
-    await page.click('#onetrust-accept-btn-handler');
+    // await page.waitForSelector('#onetrust-accept-btn-handler');
+    // await page.click('#onetrust-accept-btn-handler');
 
     await page.waitForSelector('button.css-fyte2i');
 
